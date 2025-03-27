@@ -1,38 +1,24 @@
 # Apuntes-Sexta semana
-Apuntes control de movimiento - Primer corte-Tercera Semana
+Apuntes control de movimiento - Segundo Corte-Sexta Semana
 
-# MOTORES, SENSORES Y DRIVERS
-En esta clase, se habló de los tipos de motores existente en la industria, las diferencias entre sí y las características partículares de cada uno. Adicionalmente como desde SimScape - Matlab podemos hacer una validación de modelo del motor con el que queramos trabajar, esto desde ciertos parametros que nos entregan los fabricantes. 
-Para controlar su operación, los drivers actúan como amplificadores, convirtiendo señales de control en señales de alta potencia para alimentar los motores. En la industria, es común el uso de PWM (modulación por ancho de pulso) como método eficiente de control.
-Además, los sistemas de motores requieren sensores para garantizar precisión en su operación. Dispositivos como encoders y resolvers permiten medir la posición, velocidad y dirección del movimiento, mientras que otros sensores, como los de efecto Hall o shunt, se emplean para medir corriente y, por ende, inferir el torque. En los servomecanismos, la combinación de sensores, controladores y drivers asegura un movimiento preciso y eficiente.
+# PERFILES DE MOVIMIENTO
+En esta clase se abordó el diseño de perfiles en el entorno virtual de Simscape, con énfasis en las diversas conexiones posibles y su comportamiento dinámico según la configuración seleccionada. Se profundizó en la asignación y funcionamiento de cada eje, analizando su movimiento, rango de rotación, y las interacciones mecánicas asociadas. Asimismo, se exploró el diseño detallado de cada perfil, destacando la posibilidad de ajustar el tamaño de los ejes y simular desplazamientos mediante los efectores proporcionados por el sistema, optimizando así la precisión y funcionalidad del modelo virtual.
 
-## 1. MOTORES
-Son dispositivso que convierten la energía eléctrica en energía mecánica a través de la interacción de campos magnéticos, esto mediante el paso de corriente eléctrica por un devanado, generando un campo magnético que induce el movimiento de un rotor. Se utilizan ampliamente en maquinaria industrial, electrodomésticos, vehículos eléctricos y sistemas automatizados, debido a su eficiencia, precisión y facilidad de control. 
+## 1. Definición movimiento de perfil
+El movimiento de un perfil está determinado como el movimiento dentro de una trayectoría para cumplir el recorrido de un punto A a un punto B. Existen diferentes casos dentro del movimiento de perfil que está dado por la cantidad de ejes que se quieran mover al tiempo.
 
->🔑 *Motores DC:* Los motores DC o motores de corriente continua, son dispositivos electromecánicos capaces de convertir energía eléctrica en energía mecánica.
+>🔑 *Caso 1:* Es el caso más simple en el cual se mueve un solo eje por lo que el movimiento se observará como una línea recta.
 >
->🔑 *Motores AC Asíncrono:* También conocidos como motores de inducción, son motores que funcionan con corriente alterna (AC), pero al ser asíncronos la velocidad de rotación no es igual a la velocidad del campo magnéticos del estator. 
+>🔑 *Caso 2:* Para el manejo de diferentes ejes se requiere una combinación de diferentes perfiles para lograr una tarea específica; para entender el movimiento de cada eje se debe tener en cuenta la posición, velocidad y aceleración de cada etapa.
 >
->🔑 *Motores AC Síncrono:* Son motores que funcionan con corriente alterna (AC), pero al ser asíncronos la velocidad de rotación es exactamente igual a la velocidad del campo magnéticos del estator, esto hace que no haya deslizamiento, osea que el rotor gira en síncronica con el campo magnético del estator.
->
->🔑 *Servomotores:* Se asocia a un sistemas que es capaz se seguir referencias, es decir que sigue cambios en determinado tiempo, estas referencias pueden llegar a ser de posición, velocidad o torque mediante un sistema de control.
 
-### 1.1. Motores Corriente Continua
-Estos motores contienen las siguientes caracteristicas fisicas:
-* Estator: El devanado inductor genera el campo magnético de excitación. Está compuesto por una corona de material ferromagnético (culata) con polos en su interior, alrededor de los cuales se enrollan los devanados de excitación que crean el campo magnético al circular corriente.
-* Rotor: Está constituido por una pieza cilíndrica ranurada de material ferromagnético, donde se aloja el devanado inducido cerrado en las ranuras del rotor.
-* Colector de Delgas: Es un conjunto de láminas de cobre aisladas entre sí que giran con el rotor y están conectadas eléctricamente a las bobinas del devanado inducido, permitiendo su conexión al exterior.
-  
-En cuestiones industriales estos tipos de motores tienen varias aplicaciones, por lo que podemos resaltas las siguientes ventajas y desventajas:
+## Conceptos básicos de la Cinemática de Movimiento
+### Cálculos de Perfil de Movimiento:
+* Posición (X(t)):  Determina la ubicación del sistema o efector final en función del tiempo.
+* Velocidad $<a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=v(t)=\frac{dx}{dt}"><img src="http://www.alciro.org/cgi/tex.cgi?v(t)=\frac{dx}{dt}" title="v(t)=\frac{dx}{dt}" border="0" /></a>$ : Evalúa la tasa de cambio de posición y permite definir un movimiento suave y eficiente. La anterior ecuación se puede reescribir en cuestión de integrales de la siguiente manera: $<a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=s=\int v(t)dt"><img src="http://www.alciro.org/cgi/tex.cgi?s=\int v(t)dt" title="s=\int v(t)dt" border="0" /></a>$.
+* Aceletación $<a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=a(t)=\frac{dv}{dt}"><img src="http://www.alciro.org/cgi/tex.cgi?a(t)=\frac{dv}{dt}" title="a(t)=\frac{dv}{dt}" border="0" /></a>$ : Controla la aceleración máxima para evitar esfuerzos mecánicos excesivos. La anterior ecuación se puede reescribir en cuestión de integrales de la siguiente manera:$<a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=s=\int a(t)dt"><img src="http://www.alciro.org/cgi/tex.cgi?s=\int a(t)dt" title="s=\int a(t)dt" border="0" /></a>$.
 
-| **Ventajas**                                 | **Desventajas**                                                           |
-|----------------------------------------------|---------------------------------------------------------------------------|
-| • Control más simple                         | • Requiere mantenimiento e inspección periódicas                          |
-| • Driver de potencia más simple              | • No se usa en entornos limpios debido a la abrasión de las escobillas    |
-| • Bajo precio en bajas capacidades           | • No se puede utilizar para altos torques                                 |
-| • Alta eficiencia en aplicaciones pequeñas   | • Sus imanes pueden sufrir desmagnetización con el tiempo                 |
-
-Tabla 1. Motores DC
+La siguiente imagen refleja el comportamiento gráfico de la posición, velocidad y aceleración. 
 
 ### 1.2. Motores Corriente Alterna - Asíncronos
 El motor funciona mediante un campo magnético giratorio generado en el devanado inductor del estator. Al atravesar el devanado del rotor, induce fuerzas electromagnéticas que generan corrientes, provocando una reacción que hace girar el motor a una velocidad inferior a la de sincronismo.
