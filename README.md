@@ -15,10 +15,11 @@ El movimiento de un perfil está determinado como el movimiento dentro de una tr
 ## Conceptos básicos de la Cinemática de Movimiento
 ### Cálculos de Perfil de Movimiento:
 * Posición (X(t)):  Determina la ubicación del sistema o efector final en función del tiempo.
-* Velocidad $<a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=v(t)=\frac{dx}{dt}"><img src="http://www.alciro.org/cgi/tex.cgi?v(t)=\frac{dx}{dt}" title="v(t)=\frac{dx}{dt}" border="0" /></a>$ : Evalúa la tasa de cambio de posición y permite definir un movimiento suave y eficiente. La anterior ecuación se puede reescribir en cuestión de integrales de la siguiente manera: $<a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=s=\int v(t)dt"><img src="http://www.alciro.org/cgi/tex.cgi?s=\int v(t)dt" title="s=\int v(t)dt" border="0" /></a>$.
-* Aceletación $<a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=a(t)=\frac{dv}{dt}"><img src="http://www.alciro.org/cgi/tex.cgi?a(t)=\frac{dv}{dt}" title="a(t)=\frac{dv}{dt}" border="0" /></a>$ : Controla la aceleración máxima para evitar esfuerzos mecánicos excesivos. La anterior ecuación se puede reescribir en cuestión de integrales de la siguiente manera:$<a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=s=\int a(t)dt"><img src="http://www.alciro.org/cgi/tex.cgi?s=\int a(t)dt" title="s=\int a(t)dt" border="0" /></a>$.
+* Velocidad  $v(\tau): \frac{d\chi }{d\tau}$ : Evalúa la tasa de cambio de posición y permite definir un movimiento suave y eficiente. La anterior ecuación se puede reescribir en cuestión de integrales de la siguiente manera: $s=\int v(\tau )d\tau$.
+* Aceleración $a(\tau): \frac{dv}{d\tau}$ : Controla la aceleración máxima para evitar esfuerzos mecánicos excesivos. La anterior ecuación se puede reescribir en cuestión de integrales de la siguiente manera: $s=\int a(\tau )d\tau$.
 
 La siguiente imagen refleja el comportamiento gráfico de la posición, velocidad y aceleración. 
+
 
 ### 1.2. Motores Corriente Alterna - Asíncronos
 El motor funciona mediante un campo magnético giratorio generado en el devanado inductor del estator. Al atravesar el devanado del rotor, induce fuerzas electromagnéticas que generan corrientes, provocando una reacción que hace girar el motor a una velocidad inferior a la de sincronismo.
