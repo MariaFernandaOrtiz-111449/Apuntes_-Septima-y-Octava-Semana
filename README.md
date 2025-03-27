@@ -20,6 +20,8 @@ El movimiento de un perfil está determinado como el movimiento dentro de una tr
 
 La siguiente imagen refleja el comportamiento gráfico de la posición, velocidad y aceleración. 
 
+![](https://github.com/MariaFernandaOrtiz-111449/Apuntes_-Sexta-Semana/blob/0a3b3c05c17711da2cf50962724627c729bb02ea/perfil%20de%20movimiento.png)
+
 
 ### 1.2. Motores Corriente Alterna - Asíncronos
 El motor funciona mediante un campo magnético giratorio generado en el devanado inductor del estator. Al atravesar el devanado del rotor, induce fuerzas electromagnéticas que generan corrientes, provocando una reacción que hace girar el motor a una velocidad inferior a la de sincronismo.
