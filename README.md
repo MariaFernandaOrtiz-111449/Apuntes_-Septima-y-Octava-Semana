@@ -147,7 +147,4 @@ A continuación explicaremos 3 tipos de movimiento multi-eje:
 * La coordinación de múltiples ejes permite lograr trayectorias complejas en robótica, CNC y sistemas automatizados. Diferentes estrategias, como el movimiento secuencial, coordinado e interpolación multieje, permiten adaptar el sistema según los requisitos de la aplicación.
 
 ## 7. Referencias
-* CHAPMAN. 2005. Maquinas eléctricas. Madrid: McGraw-Hill Interamericana
-* LANGSDORF. 1968. Principios de las maquinas de corriente continua. McGrawHill
-* SERRANO IRIBARNEGARAY. 1989: Fundamentos de maquinas eléctricas rotativas. Marcombo.
-* https://www.swe.siemens.com/spain/web/es/industry/drive_tech/variadores /Pages/Variadores.aspx
+
