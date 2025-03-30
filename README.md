@@ -34,9 +34,63 @@ Para el desarrollo y movimiento de perfiles se deben tener en cuenta diferentes 
 
 En las anteriores ecuaciones el parámetro $t_{0}$ es el tiempo inicial del movimiento del intervalo donde se calculará, $v_{0}$ es la velocidad inicial del sistema del intervalo donde se calculará y $s_{0}$ la posición inicial en la que se encontrará el sistema.
 
-
+![](https://github.com/MariaFernandaOrtiz-111449/Apuntes_-Sexta-Semana/blob/0d7817a8221d6b92206eb80cb93a1d519e691503/area%20bajo%20la%20curva.png)
 
 ## 3. Tipos de Perfiles
+
+En sistemas mecánicos y de control, el movimiento se describe mediante cambios en la posición de un objeto a lo largo del tiempo. Dependiendo de cómo varíen la velocidad y la aceleración, se pueden clasificar en distintos tipos, cada uno con aplicaciones específicas en robótica, automatización y maquinaria industrial.
+
+Los perfiles de movimiento más comunes incluyen:
+
+**Perfil Trapezoidal**:  Es uno de los más utilizados en control de movimiento porque proporciona un equilibrio entre rapidez y suavidad. Se llama así porque la forma de la gráfica de velocidad en función del tiempo tiene un aspecto de trapezoide.
+
+El movimiento se divide en tres fases principales:
+
+*Aceleración constante*
+
+* El sistema inicia desde el reposo y aumenta su velocidad de manera uniforme hasta alcanzar una velocidad máxima.
+
+* La aceleración es constante en esta etapa.
+
+*Velocidad constante*
+
+* El sistema se mueve a velocidad máxima sin cambios.
+
+* No hay aceleración ni desaceleración en esta fase.
+
+*Desaceleración constante*
+
+* El sistema reduce su velocidad de manera uniforme hasta detenerse o alcanzar el nuevo punto de destino.
+
+* La desaceleración es constante y de la misma magnitud que la aceleración.
+
+**Curva en S**: Es una evolución del perfil trapezoidal que suaviza los cambios bruscos en aceleración y desaceleración. Se llama así porque su gráfica de posición en función del tiempo tiene una forma similar a una letra "S".
+
+Este tipo de movimiento es ideal cuando se busca minimizar vibraciones, reducir el impacto mecánico y mejorar la estabilidad en sistemas de control de movimiento.
+
+El movimiento se divide en cinco fases principales:
+
+*Aceleración progresiva*
+
+*En lugar de iniciar con una aceleración constante, esta aumenta gradualmente, lo que suaviza el arranque.
+
+*Aceleración constante*
+
+*El sistema mantiene una aceleración estable hasta alcanzar la velocidad máxima.
+
+*Velocidad constante*
+
+*El sistema se desplaza sin cambios en la velocidad.
+
+*Desaceleración constante*
+
+*Se inicia la fase de frenado, reduciendo la velocidad de manera controlada.
+
+*Desaceleración progresiva*
+
+*En vez de frenar bruscamente, la desaceleración disminuye de manera gradual hasta el reposo.
+
+
 **Modelo por corriente de armadura**
 * Parte Eléctrica: $\upsilon a= La*Ia + Ra*Ia + Vb$
 * Parte Magnética: $Tm = ( Ka*Kc*Ic )*Ia( t ) = K\tau *Ia( t )$  $Vb = Ke* \omega$  $Tm = Tc + Tp$
