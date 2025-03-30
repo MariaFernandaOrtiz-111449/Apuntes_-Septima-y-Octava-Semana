@@ -23,41 +23,20 @@ La siguiente imagen refleja el comportamiento gráfico de la posición, velocida
 ![](https://github.com/MariaFernandaOrtiz-111449/Apuntes_-Sexta-Semana/blob/0a3b3c05c17711da2cf50962724627c729bb02ea/perfil%20de%20movimiento.png)
 
 
-### 1.2. Motores Corriente Alterna - Asíncronos
-El motor funciona mediante un campo magnético giratorio generado en el devanado inductor del estator. Al atravesar el devanado del rotor, induce fuerzas electromagnéticas que generan corrientes, provocando una reacción que hace girar el motor a una velocidad inferior a la de sincronismo.
-  
-En cuestiones industriales estos tipos de motores tienen varias aplicaciones, por lo que podemos resaltas las siguientes ventajas y desventajas:
+## 2. Reglas Geométricas
+Para el desarrollo y movimiento de perfiles se deben tener en cuenta diferentes conceptos frente a la dinámica de cada uno de los ejes del perfil. A continuación realizaremos una breve explicación de los puntos a tener en cuenta.
+* Cualquier punto de la posición del movimiento del sistema está dado por el área bajo la curva de velocidad hasta el instante de tiempo a analizar.
+* La aceleración se puede denotar como la pendiente de la curva de velocidad.
+* Este análisis está dado por las siguientes ecuaciones:
+  $v= v_{0} + a(t-t_{0})$
 
-| **Ventajas**                                 | **Desventajas**                                                           |
-|----------------------------------------------|---------------------------------------------------------------------------|
-| • Poco mantenimiento                         | • Baja eficiencia en aplicaciones pequeñas                                |
-| • Excelente resistencia al entorno           |  Control más complicado que el DC por las señales de potencia             |
-| • Alta velocidad y alto torque               | • Puede sufrir cambios en sus características debido a temperaturas       |
-| • Alta eficiencia en aplicaciones grandes    |                                                                           |
-| • Estructura robusta                         |                                                                           |
+  $s=s_{0}+\frac{1}{2}(t-t_{0})(v_{0}+a(t-t_{0}))$
 
-Tabla 2. Motores AC Asíncronicos
+En las anteriores ecuaciones el parámetro $t_{0}$ es el tiempo inicial del movimiento del intervalo donde se calculará, $v_{0}$ es la velocidad inicial del sistema del intervalo donde se calculará y $s_{0}$ la posición inicial en la que se encontrará el sistema.
 
-### 1.3. Motores Corriente Alterna - Síncronos
-Son máquinas eléctricas cuya velocidad de rotación depende de la frecuencia de la red AC, manteniendo igual velocidad entre el rotor y el campo magnético del estator. Los imanes de campo se montan en el rotor y se excitan con corriente continua, mientras que las bobinas de armadura, divididas en tres partes, se alimentan con corriente trifásica. Estos motores contienen las siguientes caracteristicas fisicas:
-* Estator:  Bobinado trifásico para producir el campo magnético giratorio.
-* Rotor: Tiene unos imanes o bobinas de excitación recorridas por una corriente continua. Gira a la velocidad del campo magnético.
-* Anillos Rozantes: Son anillos metálicos que sirven para alimentar de corriente continua al rotor.
 
-Se debe tener en cuenta que para iniciar el motor síncronico se debe aplica una señal alterna trifásica al estator y una señal DC al rotor, generando un campo magnético con polaridad. El campo del estator atrae al del rotor, provocando su giro a velocidad de sincronismo.
-  
-En cuestiones industriales estos tipos de motores tienen varias aplicaciones, por lo que podemos resaltas las siguientes ventajas y desventajas:
 
-| **Ventajas**                                     | **Desventajas**                                                           |
-|--------------------------------------------------|---------------------------------------------------------------------------|
-| • Muy poco mantenimiento                         | • Control de dificultad intermedia                                        |
-| • Excelente resistencia al entorno               | • Se requiere respuesta 1:1 entre driver motor                            |
-| • Compactos y ligeros                            | • Sus imanes pueden sufrir desmagnetización con el tiempo                 |
-| • Alta eficiencia en todo tipo de aplicaciones   |                                                                           |
-
-Tabla 3. Motores AC Síncronicos
-
-### 1.4. Servomotores
+## 3. Tipos de Perfiles
 **Modelo por corriente de armadura**
 * Parte Eléctrica: $\upsilon a= La*Ia + Ra*Ia + Vb$
 * Parte Magnética: $Tm = ( Ka*Kc*Ic )*Ia( t ) = K\tau *Ia( t )$  $Vb = Ke* \omega$  $Tm = Tc + Tp$
