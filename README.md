@@ -74,104 +74,66 @@ El movimiento se divide en cinco fases principales:
 
 *Aceleración progresiva*
 
-*En lugar de iniciar con una aceleración constante, esta aumenta gradualmente, lo que suaviza el arranque.
+* En lugar de iniciar con una aceleración constante, esta aumenta gradualmente, lo que suaviza el arranque.
 
 *Aceleración constante*
 
-*El sistema mantiene una aceleración estable hasta alcanzar la velocidad máxima.
+* El sistema mantiene una aceleración estable hasta alcanzar la velocidad máxima.
 
 *Velocidad constante*
 
-*El sistema se desplaza sin cambios en la velocidad.
+* El sistema se desplaza sin cambios en la velocidad.
 
 *Desaceleración constante*
 
-*Se inicia la fase de frenado, reduciendo la velocidad de manera controlada.
+* Se inicia la fase de frenado, reduciendo la velocidad de manera controlada.
 
 *Desaceleración progresiva*
 
-*En vez de frenar bruscamente, la desaceleración disminuye de manera gradual hasta el reposo.
+* En vez de frenar bruscamente, la desaceleración disminuye de manera gradual hasta el reposo.
 
-![]()
+![](https://github.com/MariaFernandaOrtiz-111449/Apuntes_-Sexta-Semana/blob/77a85765182e09a1f234fc1bdefb7dcf80b80b5d/curva%20s.png)
 
-**Modelo por corriente de armadura**
-* Parte Eléctrica: $\upsilon a= La*Ia + Ra*Ia + Vb$
-* Parte Magnética: $Tm = ( Ka*Kc*Ic )*Ia( t ) = K\tau *Ia( t )$  $Vb = Ke* \omega$  $Tm = Tc + Tp$
-* Parte Mecánica: $J*\frac{\partial^2 \theta }{\partial t^2  } + b*\frac{\mathrm{d} \theta }{\mathrm{d} t} + R\theta = \tau ( t )$
-$La * \frac{\mathrm{d} ( \frac{J \theta   + b\theta  + K\theta }{K\tau } )}{\mathrm{d} t} + Ra * ( \frac{J \theta   + b\theta  + K\theta }{K\tau } ) + Ke \theta  = \upsilon a$
+*Modelo Matemático Curva en S*
 
-## 2. SENSORES
-Un sensores un dispositivo que detecta cambios en una magnitud física o química, como temperatura, presión o luz, y los convierte en señales eléctricas para su procesamiento. Se usa en diversos sistemas para monitoreo y automatización.
+* Según la cantidad de segmentos curvos que presente la velocidad, esta está dada por un modelo de polinomio de segundo orden.
 
->🔑 *Encoder:* Un encoder es un sensor que convierte el movimiento (rotación o desplazamiento) en señales eléctricas para medir posición, velocidad o dirección en motores y sistemas automatizados.
->
->🔑 *Resolver:* Es un sensor electromecánico que mide la posición angular y la velocidad de un eje, utilizando señales eléctricas sin necesidad de componentes electrónicos en el rotor, lo que lo hace resistente y preciso. 
+$$v(t)=C_{1}t^{2} + C_{2}t + C{3}$$
 
-Los servomecanismos utilizan sensores para medir corriente (torque), posición y velocidad, asegurando el cumplimiento de las rutinas de movimiento necesarias para diversas aplicaciones. Sin estas mediciones, no se puede garantizar un control preciso.
-Se analizarán algunos tipos de sensores que existen, especialmente los encoder u otros sensores que nos permitan hacer mediciones de pulsos de un motor.
+  En la fórmula anterior $C_{1}$, $C_{2}$ y $C_{3}$ son coeficientes que están determinadas por las condiciones de frontera.
 
-### 2.1. Encoders
-Generalmente son usados para medir tanto la posición como la velocidad del eje de cualquier tipo de motor.
-* Encoders Absolutos: Tienen un Código digital de posición absoluta para una sola revolución y un contador de revoluciones.
-* Encoders Incrementales: Generan un número específico de pulsos por unidad de longitud de movimiento lineal.
+## 4. Movimiento Multi-eje
+Se refiere a la coordinación de varios ejes de movimiento (X, Y, Z, rotación, etc.) para lograr trayectorias complejas y precisas en sistemas mecánicos y robóticos. Es fundamental en aplicaciones donde un solo eje no es suficiente para realizar una tarea, como en robots industriales, máquinas CNC y brazos manipuladores.
 
-Comparandos ambos tipos de encoders, tenemos que:
+A continuación explicaremos 3 tipos de movimiento multi-eje:
 
-| **Elemento**              | **Encoder Incremental**                 |  **Encoder Absoluto**                                                     |
-|---------------------------|-----------------------------------------|---------------------------------------------------------------------------|
-| Salida                    | Salida aumenta incrementalmente         | Hay posiciones absolutas en una revolución                                |
-| Reinicialización          | Operación de retorno durante encendido  | No require ninguna operación de retorno ya que se sabe siempre su posición dentro de una revolución   |
-| Precio                    | Bajo                                    |Alto                                                                        |
-| Estructura                | ![](https://github.com/MariaFernandaOrtiz-111449/Apuntes---Tercera-Semana/blob/7c772e8d44d86a24e2e5148ac6cf6bbda825b5d9/Encoder%20incremental.png)  |  ![](https://github.com/MariaFernandaOrtiz-111449/Apuntes---Tercera-Semana/blob/b67c06e9965e10d66c7d25e072653e2fdb2df51d/Encoder%20Absoluto.png)            |
-|Adicionales                |  Solamente se detectan pulsos           | Hay un Código perforado en el encoder. El mas usado es gray                |
+*Movimiento Secuencial*
 
-Tabla 4. MEncoders
+* Cada eje se mueve por separado, uno tras otro.
 
-### 2.2. Resolver
-Un resolver es un sensor analógico de posición angular con un rotor y un estator embobinados. Su funcionamiento es similar al de un transformador, donde la amplitud inducida en el rotor varía según la posición relativa. Existen modelos con y sin escobillas.
-* **Voltajes del resolver**: entre 2V RMS y 40V RMS.  
-* **Frecuencia de operación**: 50 Hz a 20 kHz.  
-* **Relación de transformación**: 0.2 V/V a 1 V/V.
+* Es simple de programar pero más lento.
 
-### 2.3. Medición de Torque
-torque se infiere a partir de la corriente, debido a su relación aproximadamente lineal.   
-* **Shunt**: Usa una pequeña resistencia para medir voltaje y aplicar la ley de Ohm.  
-* **Efecto Hall**: Detecta cambios en el campo magnético y, por la ley de Faraday, permite obtener la corriente.
+*Movimiento Coordinado*
 
-## 3. DRIVERS DE POTENCIA
-Un driver es un amplificador que convierte señales de control de baja potencia en señales de alta potencia (voltaje y/o corriente) para alimentar actuadores como motores, por lo que también se le conoce como amplificador. Cada eje requiere su propio driver y controlador. En los servomotores modernos, el controlador gestiona la retroalimentación de posición y velocidad, mientras que el driver maneja la retroalimentación de corriente.
-El manejo del driver se realiza mediante PWM (modulación por ancho de pulso), el estándar industrial para motores DC y AC, debido a su alta eficiencia. Algunos de los ejemplos de drivers de potencia que se pueden encontrar en el mercado, y que son bastante usados son:
+* Los ejes se mueven simultáneamente siguiendo una trayectoria planificada.
 
-* Puente H
-* L293 y L298 (AN240/1288)
+* Evita movimientos bruscos y reduce el tiempo de operación.
 
-## 4. Ejercicios
-**Validación de Modelo**
+*Interpolación Multieje*
 
-En primera medida se realiza un montaje de un motor deseado para la estimación de parámetros faltantes dentro del datasheet del mismo. Se obsera la entrada y salida del mismo mediante el osciloscopio. Todo este proceso se ralizará dentro de un espacio simulado para no desgastar los componentes físico y poder realizar las pruebas necesarias sin un alto gasto económico.
+* Lineal: Mueve varios ejes a velocidad constante en línea recta.
 
- ![](https://github.com/MariaFernandaOrtiz-111449/Apuntes---Tercera-Semana/blob/d6e6914ec354cdf12eba0cc78fcfb4d78b20ab08/Montaje.jpg)
+* Circular: Crea trayectorias circulares coordinando dos ejes.
 
-En segunda medida, se especifican los parámtros que tendrá nuestro motor, identificando con el nombre de una variable los datos restantes a calcular.
+* Helicoidal: Combina movimiento circular con desplazamiento en otro eje.
 
-![](https://github.com/MariaFernandaOrtiz-111449/Apuntes---Tercera-Semana/blob/19f1970097cd354a2adfe8c3de00d11f888ff097/parametros.jpg)
+* Spline: Usa curvas suaves para trayectorias precisas.
 
-Además, se debe tener en cuenta un motor estándar para tomar en cuenta la respuesta de un motor a una entrada escalón. Una vez teniendo las 2 gráficas del sistema, tanto la del motor de referencia y nuetro motor seleccionado, se realiza un contraste de ambas respuestas.
-![](https://github.com/MariaFernandaOrtiz-111449/Apuntes---Tercera-Semana/blob/7f7f518c4866c9cb6369a220ca7803f549a9a937/Simulacion.jpg)
 
-Por último, se realiza la estimación de parámetros de nuestro motor y con esto completar la información faltante del funcionamiento del motor seleccionado.
+## 5. Ejercicios
+## 6. Conclusiones
 
-![](https://github.com/MariaFernandaOrtiz-111449/Apuntes---Tercera-Semana/blob/aa328692bd5aad8d0854940948ad1e2ec0514aa9/estimaci%C3%B3n.jpg)
-
-En la siguiente imagen podemos observar la respuesta del motoro con la estimación de parámtros faltantes; se observa un seguimiento a la referencia de la entrada con la que se alimenta al motor. 
-
-![](https://github.com/MariaFernandaOrtiz-111449/Apuntes---Tercera-Semana/blob/6272ebc703a4665d498ee1e5b2a2bb38e9ef1e22/datos%20iniciales.jpg)
-
-## 5. Conclusiones
-Los motores eléctricos, junto con los sensores y drivers, forman la base de innumerables aplicaciones industriales y tecnológicas. Su correcto funcionamiento depende de una integración efectiva de los diferentes componentes, desde la generación del movimiento hasta su regulación mediante señales de control y retroalimentación.
-El uso de tecnologías como PWM en los drivers y la incorporación de sensores de posición y corriente han permitido aumentar la eficiencia y precisión de los sistemas de automatización. Comprender estos conceptos es esencial para diseñar y optimizar motores en diversas aplicaciones, desde robótica hasta maquinaria industrial, garantizando un desempeño confiable y eficiente.
-
-## 6. Referencias
+## 7. Referencias
 * CHAPMAN. 2005. Maquinas eléctricas. Madrid: McGraw-Hill Interamericana
 * LANGSDORF. 1968. Principios de las maquinas de corriente continua. McGrawHill
 * SERRANO IRIBARNEGARAY. 1989: Fundamentos de maquinas eléctricas rotativas. Marcombo.
