@@ -131,7 +131,20 @@ A continuación explicaremos 3 tipos de movimiento multi-eje:
 
 
 ## 5. Ejercicios
+
 ## 6. Conclusiones
+
+* El diseño adecuado de perfiles de movimiento en entornos virtuales como Simscape permite optimizar la eficiencia y precisión de los sistemas mecánicos, facilitando la simulación de trayectorias y desplazamientos controlados.
+
+* El análisis de posición, velocidad y aceleración es fundamental para garantizar movimientos suaves y eficientes, evitando esfuerzos mecánicos excesivos y optimizando el rendimiento del sistema.
+
+*Ventajas de los Perfiles de Movimiento Comunes*
+
+* Perfil trapezoidal: Proporciona un equilibrio entre rapidez y suavidad, siendo ideal para aplicaciones que requieren eficiencia sin excesiva complejidad.
+
+* Perfil en S: Reduce vibraciones y esfuerzos mecánicos al suavizar los cambios de aceleración y desaceleración, mejorando la estabilidad del sistema.
+
+* La coordinación de múltiples ejes permite lograr trayectorias complejas en robótica, CNC y sistemas automatizados. Diferentes estrategias, como el movimiento secuencial, coordinado e interpolación multieje, permiten adaptar el sistema según los requisitos de la aplicación.
 
 ## 7. Referencias
 * CHAPMAN. 2005. Maquinas eléctricas. Madrid: McGraw-Hill Interamericana
