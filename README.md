@@ -64,6 +64,8 @@ El movimiento se divide en tres fases principales:
 
 * La desaceleración es constante y de la misma magnitud que la aceleración.
 
+![](https://github.com/MariaFernandaOrtiz-111449/Apuntes_-Sexta-Semana/blob/7049ff48ecd31d96b365c153e34da52d09cd3c59/perfil%20trapezoidal.png)
+
 **Curva en S**: Es una evolución del perfil trapezoidal que suaviza los cambios bruscos en aceleración y desaceleración. Se llama así porque su gráfica de posición en función del tiempo tiene una forma similar a una letra "S".
 
 Este tipo de movimiento es ideal cuando se busca minimizar vibraciones, reducir el impacto mecánico y mejorar la estabilidad en sistemas de control de movimiento.
@@ -90,6 +92,7 @@ El movimiento se divide en cinco fases principales:
 
 *En vez de frenar bruscamente, la desaceleración disminuye de manera gradual hasta el reposo.
 
+![]()
 
 **Modelo por corriente de armadura**
 * Parte Eléctrica: $\upsilon a= La*Ia + Ra*Ia + Vb$
