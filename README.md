@@ -1,5 +1,5 @@
-# Apuntes-Sexta semana
-Apuntes control de movimiento - Segundo Corte-Sexta Semana
+# Apuntes-Séptima y Octava semana
+Apuntes control de movimiento - Segundo Corte-Séptima y Octava Semana
 
 # PERFILES DE MOVIMIENTO
 En esta clase se abordó el diseño de perfiles en el entorno virtual de Simscape, con énfasis en las diversas conexiones posibles y su comportamiento dinámico según la configuración seleccionada. Se profundizó en la asignación y funcionamiento de cada eje, analizando su movimiento, rango de rotación, y las interacciones mecánicas asociadas. Asimismo, se exploró el diseño detallado de cada perfil, destacando la posibilidad de ajustar el tamaño de los ejes y simular desplazamientos mediante los efectores proporcionados por el sistema, optimizando así la precisión y funcionalidad del modelo virtual.
