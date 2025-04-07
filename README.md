@@ -298,3 +298,16 @@ El desplazamiento total es: $S=50$
 
 ## 7. Referencias
 
+* Craig, J. J. (2005). Introduction to Robotics: Mechanics and Control (3rd ed.). Pearson Prentice Hall.
+
+* Groover, M. P. (2020). Automation, Production Systems, and Computer-Integrated Manufacturing (5th ed.). Pearson.
+
+* Sciavicco, L., & Siciliano, B. (2000). Modeling and Control of Robot Manipulators (2nd ed.). Springer.
+
+* Norton, R. L. (2020). Design of Machinery: An Introduction to the Synthesis and Analysis of Mechanisms and Machines (6th ed.). McGraw-Hill Education.
+
+* MathWorks. (n.d.). Modeling Mechanical Systems in Simscape. Recuperado de https://www.mathworks.com/help/physmod/simscape/
+
+* MathWorks. (n.d.). Motion Profiles. Recuperado de https://www.mathworks.com/help/sm/ug/motion-profiles.html
+
+* Spong, M. W., Hutchinson, S., & Vidyasagar, M. (2006). Robot Modeling and Control. Wiley.
