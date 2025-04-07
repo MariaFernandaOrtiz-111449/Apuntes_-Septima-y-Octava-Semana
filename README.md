@@ -132,6 +132,22 @@ A continuación explicaremos 3 tipos de movimiento multi-eje:
 
 ## 5. Ejercicios
 
+### A partir del perfil de velocidad, obtenga la posición del eje (axis) transcurridos 120 ms.
+
+
+
+Tiempo total: 120 ms
+
+Tiempo de aceleración: 40 ms
+
+Tiempo de velocidad constante: 50 ms
+
+Tiempo de desaceleración: 30 ms
+
+Velocidad máxima: 40 cts/ms
+
+
+
 ## 6. Conclusiones
 
 * El diseño adecuado de perfiles de movimiento en entornos virtuales como Simscape permite optimizar la eficiencia y precisión de los sistemas mecánicos, facilitando la simulación de trayectorias y desplazamientos controlados.
