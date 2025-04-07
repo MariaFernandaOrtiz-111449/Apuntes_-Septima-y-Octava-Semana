@@ -134,7 +134,7 @@ A continuación explicaremos 3 tipos de movimiento multi-eje:
 
 ### A partir del perfil de velocidad, obtenga la posición del eje (axis) transcurridos 120 ms.
 
-
+![](https://github.com/MariaFernandaOrtiz-111449/Apuntes_-Septima-y-Octava-Semana/blob/e228ab61be56aace3489af93800206a81f0eb4c7/ejercicio%201.png)
 
 Tiempo total: 120 ms
 
@@ -146,7 +146,124 @@ Tiempo de desaceleración: 30 ms
 
 Velocidad máxima: 40 cts/ms
 
+$$V_{a}(t) = \frac{2V_{m}}{t^{2}_{a}}*t^{2}$$
 
+$V_{a}(t) = \frac{2*40}{40^{2}}*t^{2}$
+
+$V_{a}(t) = 0.05 t^{2}$
+
+$S_{a}(t) = \int_{0}^{40} 0.05 t^{2} dt$
+
+$S_{a}(t) = 1066.67 cts$
+
+### Velocidad constante:
+
+$V_{B}(t)=V_{m} = 40$
+
+$S_{B}=40*50$
+
+$S_{B}=2000 cts$
+
+### Desaceleración:
+
+$V_{c}(t) = V_{m} - \frac{2V_{m}}{t_{d}^{2}}(t-t_{d})^{2}$
+
+$V_{c}(t)=40-\frac{2*40}{30^{2}}(t-30)^{2}$
+
+$V_{c}(t)= 40-\frac{80}{900} (t-30)^{2}$
+
+$S_{c}(t)=\int_{0}^{30} (40-\frac{80}{900} (t-30)^{2})dt$
+
+*Usamos un cambio de variable u=t−30⇒du=dt:*
+
+$S_{c}=\int_{0}^{30}(40-\frac{80}{900} u^{2}) du$
+
+$S_{c} = 400 cts$}
+
+### Posición total del eje a los 120 ms
+
+$S(120)=S_{a} + S_{b} + S_{c}$
+
+$S(120)= 1066.67 + 2000 + 400$
+
+$S(120)= 3466.67 cts$
+
+## Un actuador lineal debe moverse desde una posición inicial de 0 mm hasta 120 mm en 6 segundos. Se desea usar un perfil de velocidad trapezoidal con aceleración constante de 10 mm/s².
+
+* ¿Cuál será la velocidad máxima alcanzada durante el movimiento?
+
+En un perfil trapezoidal simétrico (aceleración constante y desaceleración igual), el movimiento se divide en 3 fases:
+
+* Aceleración hasta $V_{max}$
+​
+* Movimiento a $V_{max}$
+
+* Desaceleración a 0
+
+Sea $t_{\alpha}$ el tiempo de aceleración (y también de desaceleración), y $t_{c}$ el tiempo de velocidad constante.
+
+Sabemos que: $V_{max} = a*t_{\alpha}$
+
+La distancia total recorrida es: $s=s_{1} + s_{2} + s_{3}$
+
+donde:
+
+**$S{1}= \frac{1}{2} at_{\alpha}^{2}$**
+
+**$S{2}= V_{max} + t_{c}$**
+
+**$S{3}= \frac{1}{2} at_{\alpha}^{2}$**
+
+Y el tiempo total:
+
+$T_{total}= 2t_{\alpha} + t_{c}$
+
+$t_{c}=T_{total}-2t_{\alpha}$
+
+Sustituyendo:
+
+$s=at_{\alpha}^{2} + at_{\alpha} (t_{tota}-at_{\alpha})$
+
+$s=at_{\alpha}[t_{tota}-t_{\alpha}]$
+
+Ahora sustituyo:
+
+$120=10*t_{\alpha} (6-t_{\alpha})$
+
+$10t_{\alpha}^{2} - 60t_{\alpha} + 120 =0$
+
+$t_{\alpha}^{2} - 6t_{\alpha} + 12=0$
+
+$t_{\alpha} = \frac{6\pm\sqrt{(-6)^{2}-4*(1)(12)}}{2(1)}$
+
+$t_{\alpha} = \frac{6\pm\sqrt{36-48}}{2}$
+
+**No tiene solución real**
+
+Esto significa que el perfil trapezoidal no tiene fase de velocidad constante.
+
+Entonces el perfil es en realidad triangular, con aceleración y luego desaceleración directamente.
+
+* Perfil Triangular (sin velocidad constante)
+En este caso:
+
+La distancia se reparte simétricamente:
+
+$S=2*\frac{1}{2} at_{\alpha}^{2}$
+
+$120=10t_{\alpha}^{2}$
+
+$t_{\alpha}=\sqrt{12} \approx 3.464 s$
+
+Cada fase dura $t_{\alpha}= 3.464 s$
+
+* ¿Cuánto dura cada fase del movimiento (aceleración, velocidad constante, desaceleración)?
+
+> Aceleración: 3.464 s
+
+> Desaceleración: 3.464 s
+
+> Velocidad constante: 0 s (no hay)
 
 ## 6. Conclusiones
 
