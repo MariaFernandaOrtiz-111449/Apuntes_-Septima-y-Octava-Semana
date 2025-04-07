@@ -265,6 +265,23 @@ Cada fase dura $t_{\alpha}= 3.464 s$
 
 > Velocidad constante: 0 s (no hay)
 
+
+## Dada una curva de velocidad que sigue la ecuación: $V(t) = 4t$ en el intervalo de $t = 0$ a $t = 5$ s
+
+*  Calcula el desplazamiento total usando el área bajo la curva.
+
+$S=\int_{0}^{5} v(t) dt$
+
+$S=\int_{0}^{5} 4 dt$
+
+Resolviendo la integral:
+
+$S=4*(\frac{5^{2}}{2} - \frac{0^{2}}{2}$
+
+$S=50$
+
+El desplazamiento total es: $S=50$
+
 ## 6. Conclusiones
 
 * El diseño adecuado de perfiles de movimiento en entornos virtuales como Simscape permite optimizar la eficiencia y precisión de los sistemas mecánicos, facilitando la simulación de trayectorias y desplazamientos controlados.
