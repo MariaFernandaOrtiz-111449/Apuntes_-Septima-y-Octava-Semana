@@ -308,16 +308,17 @@ El desplazamiento total es: $S=50$
 
 ## 7. Referencias
 
-* Craig, J. J. (2005). Introduction to Robotics: Mechanics and Control (3rd ed.). Pearson Prentice Hall.
+* MathWorks. (2023). Simscape User's Guide. The MathWorks, Inc.
+Recuperado de: https://www.mathworks.com/help/physmod/simscape/
 
-* Groover, M. P. (2020). Automation, Production Systems, and Computer-Integrated Manufacturing (5th ed.). Pearson.
+* Sciavicco, L., & Siciliano, B. (2012). Modelling and Control of Robot Manipulators (2da ed.). Springer.
 
-* Sciavicco, L., & Siciliano, B. (2000). Modeling and Control of Robot Manipulators (2nd ed.). Springer.
+* Craig, J. J. (2005). Introduction to Robotics: Mechanics and Control (3ra ed.). Pearson Education.
 
-* Norton, R. L. (2020). Design of Machinery: An Introduction to the Synthesis and Analysis of Mechanisms and Machines (6th ed.). McGraw-Hill Education.
+* Ogata, K. (2010). Modern Control Engineering (5ta ed.). Prentice Hall.
 
-* MathWorks. (n.d.). Modeling Mechanical Systems in Simscape. Recuperado de https://www.mathworks.com/help/physmod/simscape/
+* Bolton, W. (2015). Mechatronics: Electronic Control Systems in Mechanical and Electrical Engineering (6ta ed.). Pearson.
 
-* MathWorks. (n.d.). Motion Profiles. Recuperado de https://www.mathworks.com/help/sm/ug/motion-profiles.html
+* González de Santos, P., Balaguer, C., & Garcia, E. (2006). Mobile Robotics: Solutions and Challenges. Research Signpost.
 
-* Spong, M. W., Hutchinson, S., & Vidyasagar, M. (2006). Robot Modeling and Control. Wiley.
+* Beards, C. F. (1995). Engineering Vibration Analysis with Application to Control Systems. Edward Arnold.
