@@ -8,9 +8,8 @@ En esta clase se abordó el diseño de perfiles en el entorno virtual de Simscap
 El movimiento de un perfil está determinado como el movimiento dentro de una trayectoría para cumplir el recorrido de un punto A a un punto B. Existen diferentes casos dentro del movimiento de perfil que está dado por la cantidad de ejes que se quieran mover al tiempo.
 
 >🔑 *Caso 1:* Es el caso más simple en el cual se mueve un solo eje por lo que el movimiento se observará como una línea recta.
->
+
 >🔑 *Caso 2:* Para el manejo de diferentes ejes se requiere una combinación de diferentes perfiles para lograr una tarea específica; para entender el movimiento de cada eje se debe tener en cuenta la posición, velocidad y aceleración de cada etapa.
->
 
 ## Conceptos básicos de la Cinemática de Movimiento
 ### Cálculos de Perfil de Movimiento:
@@ -22,8 +21,10 @@ La siguiente imagen refleja el comportamiento gráfico de la posición, velocida
 
 ![](https://github.com/MariaFernandaOrtiz-111449/Apuntes_-Sexta-Semana/blob/0a3b3c05c17711da2cf50962724627c729bb02ea/perfil%20de%20movimiento.png)
 
+*Fig 1. Movimiento de varibles del perfil de Movimiento*
 
 ## 2. Reglas Geométricas
+
 Para el desarrollo y movimiento de perfiles se deben tener en cuenta diferentes conceptos frente a la dinámica de cada uno de los ejes del perfil. A continuación realizaremos una breve explicación de los puntos a tener en cuenta.
 * Cualquier punto de la posición del movimiento del sistema está dado por el área bajo la curva de velocidad hasta el instante de tiempo a analizar.
 * La aceleración se puede denotar como la pendiente de la curva de velocidad.
@@ -35,6 +36,9 @@ Para el desarrollo y movimiento de perfiles se deben tener en cuenta diferentes 
 En las anteriores ecuaciones el parámetro $t_{0}$ es el tiempo inicial del movimiento del intervalo donde se calculará, $v_{0}$ es la velocidad inicial del sistema del intervalo donde se calculará y $s_{0}$ la posición inicial en la que se encontrará el sistema.
 
 ![](https://github.com/MariaFernandaOrtiz-111449/Apuntes_-Sexta-Semana/blob/0d7817a8221d6b92206eb80cb93a1d519e691503/area%20bajo%20la%20curva.png)
+
+*Fig 2. Gráficas Reglas Geométricas de Movimiento*
+
 
 ## 3. Tipos de Perfiles
 
@@ -66,6 +70,8 @@ El movimiento se divide en tres fases principales:
 
 ![](https://github.com/MariaFernandaOrtiz-111449/Apuntes_-Sexta-Semana/blob/7049ff48ecd31d96b365c153e34da52d09cd3c59/perfil%20trapezoidal.png)
 
+*Fig 3. Análisis Perfil Trapezoidal*
+
 **Curva en S**: Es una evolución del perfil trapezoidal que suaviza los cambios bruscos en aceleración y desaceleración. Se llama así porque su gráfica de posición en función del tiempo tiene una forma similar a una letra "S".
 
 Este tipo de movimiento es ideal cuando se busca minimizar vibraciones, reducir el impacto mecánico y mejorar la estabilidad en sistemas de control de movimiento.
@@ -93,6 +99,8 @@ El movimiento se divide en cinco fases principales:
 * En vez de frenar bruscamente, la desaceleración disminuye de manera gradual hasta el reposo.
 
 ![](https://github.com/MariaFernandaOrtiz-111449/Apuntes_-Sexta-Semana/blob/77a85765182e09a1f234fc1bdefb7dcf80b80b5d/curva%20s.png)
+
+*Fig 4. Gráfica Perfil Curva S*
 
 *Modelo Matemático Curva en S*
 
@@ -135,6 +143,8 @@ A continuación explicaremos 3 tipos de movimiento multi-eje:
 ### A partir del perfil de velocidad, obtenga la posición del eje (axis) transcurridos 120 ms.
 
 ![](https://github.com/MariaFernandaOrtiz-111449/Apuntes_-Septima-y-Octava-Semana/blob/e228ab61be56aace3489af93800206a81f0eb4c7/ejercicio%201.png)
+
+*Fig 5. Ejercicio Curva en S*
 
 Tiempo total: 120 ms
 
